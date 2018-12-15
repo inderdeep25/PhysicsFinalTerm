@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Controllers\Platforms\FallingPlatformController.cs" />
     <Compile Include="Assets\Scripts\Controllers\Platforms\PowerUpController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\Platforms\ProjectilShootingController.cs" />
     <Compile Include="Assets\Scripts\Controllers\Platforms\RotatingTrapController.cs" />
     <Compile Include="Assets\Scripts\Controllers\Player\PhysicsController.cs" />
     <Compile Include="Assets\Scripts\Controllers\Player\PlayerController.cs" />

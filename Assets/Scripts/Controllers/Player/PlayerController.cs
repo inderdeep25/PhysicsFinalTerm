@@ -73,6 +73,14 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(WaitAndSetJumpForceTo(originamForce, 10f));
         }
 
+        if (other.gameObject.tag == "Death")
+        {
+            //TODO:Add death and restart level code later
+            Debug.Log("You Died!");
+            _canvasHandler.SetResultText("You Died!");
+            _canvasHandler.gameObject.SetActive(true);
+        }
+
     }
 
     private void OnCollisionEnter(Collision collision)
