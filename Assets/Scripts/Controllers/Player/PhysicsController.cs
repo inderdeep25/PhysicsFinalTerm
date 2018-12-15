@@ -5,7 +5,7 @@ using UnityEngine;
 public class PhysicsController : MonoBehaviour
 {
 
-    [SerializeField] private float _jumpForce = 3;
+    public float jumpForce = 15;
 
     private Rigidbody _rigidBody;
 
@@ -34,9 +34,12 @@ public class PhysicsController : MonoBehaviour
         Vector3 forwardAcceleration = forwardSpeed * transform.forward;
         Vector3 strafeforwarAcceleration = strafeSpeed * transform.right;
 
-        _rigidBody.AddForce(forwardAcceleration, ForceMode.Acceleration);
-        transform.Rotate(0, Input.GetAxis("Horizontal") * _turnSpeed * Time.deltaTime, 0);
+        if (_isGrounded)
+        {
+            _rigidBody.AddForce(forwardAcceleration, ForceMode.Acceleration);
+        }
 
+        transform.Rotate(0, Input.GetAxis("Horizontal") * _turnSpeed * Time.deltaTime, 0);
 
     }
 
@@ -47,7 +50,7 @@ public class PhysicsController : MonoBehaviour
         if (isJumpCooldownOver && _isGrounded && Input.GetKey(KeyCode.Space))
         {
             _lastJumpTime = Time.time;
-            _rigidBody.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
+            _rigidBody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
 
     }
@@ -64,7 +67,12 @@ public class PhysicsController : MonoBehaviour
                     _collisions.Add(collision.collider);
                 }
                 _isGrounded = true;
-                _rigidBody.velocity = Vector3.zero;
+                if(collision.gameObject.name != "launcher" 
+                    || collision.gameObject.name != "fallingPlatform1"
+                     || collision.gameObject.name != "fallingPlatform2") 
+                {
+                    _rigidBody.velocity = _rigidBody.velocity - _rigidBody.velocity / 2;
+                }
             }
         }
     }

@@ -1,10 +1,12 @@
 ﻿<Properties StartupConfiguration="{72583A58-D44F-4295-8E8A-862D7D66A81F}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Controllers/PlayerController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Controllers/Player/PlayerController.cs">
     <Files>
-      <File FileName="Assets/Scripts/Controllers/PlayerController.cs" Line="30" Column="49" />
-      <File FileName="Assets/Scripts/Controllers/PhysicsController.cs" Line="15" Column="44" />
-      <File FileName="Assets/Scripts/Controllers/PlayerLaunchProjectileController.cs" Line="16" Column="37" />
+      <File FileName="Assets/Scripts/Controllers/Player/PlayerController.cs" Line="38" Column="10" />
+      <File FileName="Assets/Scripts/Controllers/Platforms/FallingPlatformController.cs" Line="4" Column="1" />
+      <File FileName="Assets/Scripts/Controllers/Player/PhysicsController.cs" Line="42" Column="9" />
+      <File FileName="Assets/Scripts/Controllers/Player/PlayerLaunchProjectileController.cs" Line="17" Column="5" />
       <File FileName="Assets/Scripts/Camera/CameraFollow.cs" Line="8" Column="37" />
+      <File FileName="Assets/Scripts/Controllers/Platforms/PowerUpController.cs" Line="12" Column="17" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
