@@ -25,16 +25,6 @@ public class PlayerController : MonoBehaviour
         _physicsController.HandleJump();
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.name == "outerSpace")
-        {
-            //TODO:Add death and restart level code later
-        }
-
-
-    }
-
     private IEnumerator WaitAndFly(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
@@ -52,6 +42,13 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.name == "WinTarget")
         {
             //TODO: Add win condition later
+            Debug.Log("You Died!");
+        }
+
+        if (collision.gameObject.name == "Plane")
+        {
+            //TODO:Add death and restart level code later
+            Debug.Log("You Died!");
         }
     }
 

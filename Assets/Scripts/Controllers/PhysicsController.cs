@@ -64,6 +64,7 @@ public class PhysicsController : MonoBehaviour
                     _collisions.Add(collision.collider);
                 }
                 _isGrounded = true;
+                _rigidBody.velocity = Vector3.zero;
             }
         }
     }
