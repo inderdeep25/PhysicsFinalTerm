@@ -6,6 +6,7 @@ TagManager:
   tags:
   - SpeedBoost
   - JumpBoost
+  - Death
   layers:
   - Default
   - TransparentFX

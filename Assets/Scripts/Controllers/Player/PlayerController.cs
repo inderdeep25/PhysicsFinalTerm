@@ -91,7 +91,7 @@ public class PlayerController : MonoBehaviour
             _canvasHandler.gameObject.SetActive(true);
         }
 
-        if (collision.gameObject.name == "Plane")
+        if (collision.gameObject.tag == "Death")
         {
             //TODO:Add death and restart level code later
             Debug.Log("You Died!");
